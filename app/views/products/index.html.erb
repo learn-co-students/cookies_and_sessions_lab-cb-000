@@ -1,0 +1,9 @@
+<ul>
+  <% @cart.each do |item| %>
+    <li><%= item %></li>
+  <% end %>
+</ul>
+
+<%= form_tag '/' %>
+<%= text_field_tag 'product' %>
+<%= button_tag 'add to cart' %>
