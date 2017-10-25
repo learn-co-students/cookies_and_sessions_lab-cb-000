@@ -1,0 +1,5 @@
+<% if !@cart.nil? %>
+<p><%= @cart.join(" ") %></p>
+<%else%>
+<p>Your cart is empty</p>
+<%end%>

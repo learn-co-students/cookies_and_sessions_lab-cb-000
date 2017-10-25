@@ -1,0 +1,8 @@
+<% if flash[:notice].present? %>
+<p><%= flash[:notice] %></p>
+<%end%>
+<% if !session[:cart].nil? %>
+<%  session[:cart].each do |i| %>
+<p><%= i %></p>
+<%end%>
+<%end%>
