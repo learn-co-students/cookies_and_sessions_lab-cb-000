@@ -1,0 +1,9 @@
+<ul>
+<% session[:cart].each do |item| %>
+  <li><%= item %></li>
+<% end %>
+</ul>
+<form action="/products/add" method="POST">
+<input type="text" name="items" id="product">
+<input type="submit" id="add to cart" value="add to cart" name="add to cart">
+</form>
