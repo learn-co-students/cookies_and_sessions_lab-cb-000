@@ -54,8 +54,11 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  get "/products", to: "application#index", as: :products
-  get "/products/add", to: "application#add", as: :add_product
+  resources :products, only: [:index] do
+    collection do
+      post 'add'
+    end
+  end
 
   root 'products#index'
 end
