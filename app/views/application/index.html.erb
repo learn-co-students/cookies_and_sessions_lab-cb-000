@@ -1,0 +1,13 @@
+<%= content_tag :h1, "Cart" %>
+  <% if cart.empty? %>
+    <%= content_tag :p, "Cart is Empty" %>
+  <% else %>
+    <ul>
+      <% cart.each do |product| %>
+        <%= content_tag :li, product %>
+      <% end %>
+    </ul>
+  <% end %>
+
+<%= content_tag :h3, "Add Item" %>
+<%= render 'form' %>
