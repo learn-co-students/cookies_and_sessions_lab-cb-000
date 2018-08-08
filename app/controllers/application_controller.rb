@@ -4,6 +4,16 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :cart
 
+  def index
+  end
+
+  def add
+    cart << params[:product]
+    redirect_to products_path
+  end
+
+  private
+
   def cart
     session[:cart] ||= []
   end

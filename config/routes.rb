@@ -54,11 +54,16 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
+<<<<<<< HEAD
   resources :products, only: [:index] do
     collection do
       post 'add'
     end
   end
+=======
+  get "/products", to: "application#index", as: :products
+  get "/products/add", to: "application#add", as: :add_product
+>>>>>>> bfb497c71c8b8c9dbc41a74260a10e7dcd7ddb59
 
   root 'products#index'
 end
