@@ -1,0 +1,19 @@
+<h1>Shopping Cart</h1>
+
+<%= form_tag(controller: "products", action: "add_to_cart", method: "post") do %>
+  <%= label_tag :product %>
+  <%= text_field_tag :product %><br>
+
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+<h2>Currently in your cart:</h2>
+<% if cart.size > 0 %>
+  <ul>
+    <% cart.each do |product| %>
+      <li><%= product %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>You don't have any items yet.</p>
+<% end %>
