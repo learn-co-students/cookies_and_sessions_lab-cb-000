@@ -5,7 +5,7 @@ RSpec.describe "products/index", :type => :view do
     controller.singleton_class.class_eval do
       protected
         def cart
-          session[:cart]
+          session[:cart] || []
         end
         helper_method :cart
     end
