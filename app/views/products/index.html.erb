@@ -1,0 +1,10 @@
+<h2> Yo tis wat u buyin, yo </h2>
+  <%= cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+
+<!-- the following method has been pasted from the solution, since I couldn't figure it out on my own -->
+  <%= form_tag ({controller: 'products',action: 'add', method: 'post'}) do %>
+    <input name=product>
+    <input type=submit value='add to cart'>
+  <% end %>
