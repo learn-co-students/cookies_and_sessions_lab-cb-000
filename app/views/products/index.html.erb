@@ -1,0 +1,14 @@
+Product index!
+
+<%= form_tag(products_add_path) do %>
+
+<%= text_field_tag(:product) %>
+<%= submit_tag("add to cart") %>
+<% end %>
+
+<h2>Current cart: </h2>
+
+
+  <% cart.each do |item| %>
+    <p><%= item %></p>
+  <% end %>

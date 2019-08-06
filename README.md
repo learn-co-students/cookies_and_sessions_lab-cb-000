@@ -1,3 +1,23 @@
+rspec ./spec/controllers/application_controller_spec.rb:5 # ApplicationController cart returns the user's shopping cart, an initially empty array
+
+Pattern: helper method for current cart
+
+def cart
+  session[:cart] ||= []
+end
+
+rspec ./spec/controllers/application_controller_spec.rb:9 # ApplicationController cart creates a cart in the session if one doesn't exist
+
+
+rspec ./spec/controllers/application_controller_spec.rb:14 # ApplicationController cart returns the existing cart if one already exists
+
+
+rspec ./spec/features/cart_spec.rb:4 # homepage adds items to the cart when they're submitted via its form
+
+
+rspec ./spec/views/products_index_spec.rb:14 # products/index shows everything in the cart
+
+
 # Cookies and Sessions Lab
 
 ## Objective
