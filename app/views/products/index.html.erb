@@ -1,0 +1,16 @@
+<%= form_tag('/add') do %>
+  <label for='product'>Product:</label>
+  <%= text_field_tag 'product', nil,  placeholder: 'Milk' %>
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+<h2>Cart</h2>
+<% if !cart.nil? %>
+  <ul>
+  <% cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+  </ul>
+<% else %>
+  <p>Your cart is empty! Go spend some money and feel that dopamine. Oooh ahhh it feels good to go broke.</p>
+<% end %>
